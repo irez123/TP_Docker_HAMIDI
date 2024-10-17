@@ -1,0 +1,8 @@
+# Dockerfile for NGINX
+FROM nginx:alpine
+
+# Copier la configuration NGINX
+COPY default.conf /etc/nginx/conf.d/default.conf
+
+# Copier les fichiers WordPress
+COPY . /var/www/html
